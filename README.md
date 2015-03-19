@@ -9,6 +9,7 @@ of the data. All processes pertaining to this project are contained in a single 
 which can be found at Lyndon Pearson's "GettingAndCleaningData_CourseProject" repository.
 
 The script, run_analysis.R, operates as follows:
+
 1.Checks to see if the data preexists. If not, downloads the .zip file and unzips it.
 2.Reads in the training data set from the X_train.txt, subject_train.txt and y_train.txt files.
 3.Obtains variable (column) names for training/test sets from the activity_labels.txt and features.txt files
