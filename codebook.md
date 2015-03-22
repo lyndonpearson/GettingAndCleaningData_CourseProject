@@ -26,7 +26,25 @@ Much of the text in this area will be discussing how the variable names were obt
 removing parenthesis in the names, removing redudant titles, etc.
 
 DATA TRANSFORMATION
+Dicussion will be made in following the order set forth in the analysis script, run_analysis.R. After reading in the three
+files ("Subject", "X", and "Y") in both folders and storing them in variables, assignment of variable names began with the
+train data. Whereas the "Y" file previously consisted of an integer between one and six, those numbers were cross-referenced
+with a vector created by reading in the "activity_labels.txt" file and were replaced by the corresponding string.
 
+The "features.txt" file was used in assigning names to the "X" files of both train and test data. The variable names were
+cleaned and reformatted as detailed in the "VARIABLES" section. After naming the single column of the "Y" and "Subject" data,
+the three train files ("Suject","Y" and "X") were combined using the cbind function.
+
+A similar process was applied to the test files, resulting in a comprehensive test ("test_complete") and train ("train_complete")
+dataset. The two datasets were combined using the rbind function to make a complete dataset. From this all measurements
+pertaining to mean and standard deviation were extracted and stored in a new variable. As there was some ambiguity in 
+which measurements to extract the author decided to extract all measurements that had "mean" or "std" in their variable name.
+Extraction of this sort was accomplished by using the grepl function to identify which variable (column) names of the dataset
+contained "mean" or "std" in a case-insensitive manner. 
+
+The results from the mean and standard deviation search were stored separately and combined with the "Activity" and "Subject_ID"
+of the original dataset using the cbind function. This combination was converted to a dataframe table using the "tbl_df" function and the "dplyr" library. The resulting dataframe table was used to create the mean of each variable (column name) for each subject and activity by calling the "group_by" and "summarise_each" functions. The final step was to write this dataset to a file
+named "tidydata.txt" using the "write_table" function.
 
 
 
