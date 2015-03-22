@@ -26,6 +26,7 @@ Much of the text in this area will be discussing how the variable names were obt
 removing parenthesis in the names, removing redudant titles, etc.
 
 *****************DATA TRANSFORMATION******************************
+
 Dicussion will be made in following the order set forth in the analysis script, run_analysis.R. After reading in the three
 files ("Subject", "X", and "Y") in both folders and storing them in variables, assignment of variable names began with the
 train data. Whereas the "Y" file previously consisted of an integer between one and six, those numbers were cross-referenced
