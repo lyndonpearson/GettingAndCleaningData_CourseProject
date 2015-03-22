@@ -4,7 +4,7 @@ https://class.coursera.org/getdata-012/human_grading/view/courses/973499/assessm
 
 This file will describe data, variables and any transformations done upon the data to complete the project.
 
-DATA
+*******************DATA***********************************
 
 The raw data can be located at the following URL:
 
@@ -20,12 +20,12 @@ performing the activity), an "X" file (containing the actual data measurements) 
 activities was being performed at time of measurement). The three files in both the "test" and "train" folders were jointed together to create a complete training dataset and a complete
 test dataset.
 
-VARIABLES
+******************VARIABLES********************************
 
 Much of the text in this area will be discussing how the variable names were obtained and assigned. The "Subject" and "Y" files in both the "train" and "test" folders were given the variable names "Subject_ID" and "Activity", respectively. An existing file named "features.txt" was located one file level up in the directory and was used as a starting point for the variable names for each column of the "X" file. The final, tidy dataset including only those variable names that included "Mean" or "Std" in the string (greater discussion is found in the "DATA TRANSFORMATION" section). Finally, the variable names were cleaned up by
 removing parenthesis in the names, removing redudant titles, etc.
 
-DATA TRANSFORMATION
+*****************DATA TRANSFORMATION******************************
 Dicussion will be made in following the order set forth in the analysis script, run_analysis.R. After reading in the three
 files ("Subject", "X", and "Y") in both folders and storing them in variables, assignment of variable names began with the
 train data. Whereas the "Y" file previously consisted of an integer between one and six, those numbers were cross-referenced
